@@ -112,7 +112,8 @@ img {
     left: 0;
     width: 100%;
     background-color: var(--body-color);
-    box-shadow: 0 3px 9px hsla(0, 0, 0, 0.05);
+    box-shadow: 0 3px 9px hsla(0, 0%, 0%, 0.05);
+    z-index: 100;
 }
 
 .nav, .nav_list {
@@ -524,3 +525,88 @@ img {
 .work_card:hover :is(.work_title, .work_desc) {
     transform: translateY(0);
 }
+
+.contact_container {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.contact_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_item {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.contact_icon {
+    font-size: 1.8rem;
+    color: var(--first-color);
+    line-height: 1;
+    margin-top: 0.3rem;
+}
+
+.contact_title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.contact_data {
+    font-size: 0.95rem;
+    color: var(--text-color-light);
+}
+
+.contact_form {
+    width: 100%;
+}
+
+.form_group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.25rem;
+}
+
+.form_input {
+    margin-bottom: 1.25rem;
+}
+
+.input_control {
+    width: 100%;
+    padding: 0.9rem 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--container-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.textarea {
+    height: 140px;
+    resize: none;
+}
+
+.contact_btn {
+    float: right;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--first-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.contact_btn:hover {
+    background-color: var(--first-color-dark);
+}
+
+
+
