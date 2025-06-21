@@ -8,9 +8,40 @@
     <title>My Personal Website</title>
 </head>
 <body>
+    <input type="radio" name="color"  id="color-1">
+    <input type="radio" name="color"  id="color-2">
+    <input type="radio" name="color"  id="color-3">
+    <input type="radio" name="color"  id="color-4">
+    <input type="radio" name="color"  id="color-5">
+    <input type="radio" name="color"  id="color-6">
+    <input type="radio" name="color"  id="color-7">
+    <input type="radio" name="color"  id="color-8">
+    <input type="radio" name="color"  id="color-9">
+    <input type="checkbox" name="" id="toggle">
+    <input type="checkbox" name="" id="light-dark">
+    <div class="style_switcher">
+        <label for="toggle" class="style_switcher-toggle">
+            <i class="fa-solid fa-gear fa-spin"></i>
+        </label>
+        <label for="light-dark" class="style_switcher-theme">
+            <i class="fa-solid fa-toggle-off"></i>
+            <i class="fa-solid fa-toggle-on"></i>
+        </label>
+        <h3 class="style_switcher-title">Theme Colors</h3>
+        <div class="style_switcher-colors">
+            <label for="color-1" class="color-1 color"></label>
+            <label for="color-2" class="color-2 color"></label>
+            <label for="color-3" class="color-3 color"></label>
+            <label for="color-4" class="color-4 color"></label>
+            <label for="color-5" class="color-5 color"></label>
+            <label for="color-6" class="color-6 color"></label>
+            <label for="color-7" class="color-7 color"></label>
+            <label for="color-8" class="color-8 color"></label>
+            <label for="color-9" class="color-9 color"></label>
+        </div>
+    </div>
 
     <!--navbar-->
-    <div class="style_switcher"></div>
         <header class="header">
             <nav class="nav container">
                 <a href="index.html" class="nav_logo">Rhaditya</a>
@@ -46,7 +77,7 @@
                             <h1 class="home_title"><span>I'm</span> Rhaditya Prastito <br />
                             a <span>Undergraduate Software Engineering Student</span></h1>
                             <p class="home_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, eaque fugit velit delectus accusamus nemo cumque magnam exercitationem repudiandae, dignissimos dolorum inventore aut, similique ad.</p>
-                            
+                            <br>
                             <div class="home_btns">
                                 <a href="contact" class="btn">Contact Me</a>
                                 <a href="#portfolio" class="btn btn-transparent">Portfolio</a>
@@ -351,6 +382,24 @@
                         </div>
                     </section>
                 </main>
-                <footer class="footer"></footer>
+                <footer class="footer">
+                    <div class="footer_container container">
+                        <p class="footer_copyright">&copy; 2025 Rhaditya. All Rights Reserved</p>
+                        <div class="footer_social-links">
+                            <a href="" class="footer_social-link">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+                            <a href="" class="footer_social-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="" class="footer_social-link">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>        
+                            <a href="" class="footer_social-link">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </footer>
             </body>
             </html>

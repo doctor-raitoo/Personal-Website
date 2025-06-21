@@ -23,10 +23,22 @@
     --weight-600: 600;
 }
 
+#light-dark:checked ~ * {
+    --title-color: hsl(247, 27%, 31%);
+    --text-color: hsl(0, 0%, 41%);
+    --body-color: hsl(0, 0%, 100%);
+    --container-color: hsl(266, 78%, 98%);
+    --border-color: hsl(0, 0%, 87%);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 input,
@@ -37,7 +49,7 @@ body {
     font-size: var(--larger-font-size);
 }
 
-body {
+main {
     background-color: var(--body-color);
     color: var(--text-color);
 }
@@ -104,6 +116,158 @@ img {
     text-align: center;
     margin-bottom: 3rem;
 }
+
+
+input[type='radio'], input[type='checkbox'] {
+    display: none;
+}
+
+.style_switcher {
+    position: fixed;
+    right: 0;
+    bottom: 20%;
+    padding: 1rem;
+    width: 220px;
+    border: 1px solid var(--border-color);
+    background-color: var(--container-color);
+    border-radius: 0.5rem;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: all .3s ease;
+}
+
+#toggle:checked ~ .style_switcher {
+    transform: translateX(0);
+}
+
+.style_switcher-toggle, .style_switcher-theme {
+    position: absolute;
+    right: 110%;
+    color: var(--title-color);
+    background-color: var(--body-color);
+    border: 1px solid var(--border-color);
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease;
+}
+
+.style_switcher-toggle {
+    top: 7%;
+}
+
+.style_switcher-theme {
+    bottom: 7%;
+}
+
+.style_switcher-theme .fa-toggle-on {
+    display: none;
+}
+
+#light-dark:checked ~ * .fa-toggle-off {
+    display: none;
+}
+
+#light-dark:checked ~ * .fa-toggle-on {
+    display: block;
+}
+
+.style_switcher-title {
+    font-size: var(--large-font-size);
+    margin-bottom: 0.75rem;
+}
+
+.style_switcher-colors {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: .5rem;
+}
+
+.style_switcher-colors .color {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+
+.color-1 {
+    background-color: hsl(252, 35%, 51%);
+}
+.color-2 {
+    background-color: red;
+}
+.color-3 {
+    background-color: blue;
+}
+.color-4 {
+    background-color: pink;
+}
+.color-5 {
+    background-color: magenta;
+}
+.color-6 {
+    background-color: yellow;
+}
+.color-7 {
+    background-color: green;
+}
+.color-8 {
+    background-color: yellowgreen;
+}
+.color-9 {
+    background-color: cyan;
+}
+
+#color-1:checked ~ * {
+    --first-color: hsl(252, 35%, 51%);
+    --first-color-dark: hsl(252, 25%, 51%);
+    --first-color-light: hsl(252, 100%, 83%);
+}
+#color-2:checked ~ * {
+    --first-color: hsl(351, 85%, 51%);
+    --first-color-dark: hsl(351, 75%, 51%);
+    --first-color-light: hsl(351, 100%, 83%);
+}
+#color-3:checked ~ * {
+    --first-color: hsl(252, 87%, 50%);
+    --first-color-dark: hsl(252, 61%, 45%);
+    --first-color-light: hsl(252, 64%, 57%);
+}
+#color-4:checked ~ * {
+    --first-color: hsl(328, 64%, 52%);
+    --first-color-dark: hsl(328, 45%, 51%);
+    --first-color-light: hsl(328, 100%, 83%);
+}
+#color-5:checked ~ * {
+    --first-color: hsl(310, 83%, 45%);
+    --first-color-dark: hsl(310, 75%, 51%);
+    --first-color-light: hsl(310, 100%, 83%);
+}
+#color-6:checked ~ * {
+    --first-color: hsl(66, 85%, 52%);
+    --first-color-dark: hsl(66, 65%, 50%);
+    --first-color-light: hsl(66, 100%, 83%);
+}
+#color-7:checked ~ * {
+    --first-color: hsl(121, 80%, 47%);
+    --first-color-dark: hsl(121, 70%, 37%);
+    --first-color-light: hsl(121, 100%, 83%);
+}
+#color-8:checked ~ * {
+    --first-color: hsl(154, 85%, 51%);
+    --first-color-dark: hsl(154, 75%, 51%);
+    --first-color-light: hsl(154, 100%, 83%);
+}
+#color-9:checked ~ * {
+    --first-color: hsl(187, 77%, 46%);
+    --first-color-dark: hsl(187, 67%, 40%);
+    --first-color-light: hsl(187, 100%, 83%);
+}
+
+
 
 /* header */
 .header {
@@ -607,6 +771,33 @@ img {
 .contact_btn:hover {
     background-color: var(--first-color-dark);
 }
+
+.footer {
+    background-color: var(--container-color);
+    padding-block: 3rem;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_copyright {
+    color: var(--text-color);
+}
+
+.footer_social-links {
+    display: flex;
+    column-gap: 1.25rem;
+}
+
+.footer_social-link {
+    color: var(--text-color);
+    font-size: var(--large-font-size);
+}
+
+
 
 
 
